@@ -6,6 +6,7 @@ export const theme = {
     normal: 400,
     medium: 500,
     bold: 700,
+    extra: 800,
   },
   colors: {
     white: '#ffffff',

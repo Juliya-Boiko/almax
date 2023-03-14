@@ -10,7 +10,6 @@ const MobileHidden = styled.div`
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     display: flex;
     align-items: center;
-    
   }
 
   svg {
