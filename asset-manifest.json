@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/almax/static/css/main.c3d5249d.css",
-    "main.js": "/almax/static/js/main.f8ce0032.js",
+    "main.js": "/almax/static/js/main.b8357f3c.js",
+    "static/media/hero-desktop.png": "/almax/static/media/hero-desktop.86ded19da7158e4243b1.png",
+    "static/media/hero-mobile.png": "/almax/static/media/hero-mobile.cdd10e2a3ec2ac43f200.png",
     "index.html": "/almax/index.html",
     "main.c3d5249d.css.map": "/almax/static/css/main.c3d5249d.css.map",
-    "main.f8ce0032.js.map": "/almax/static/js/main.f8ce0032.js.map"
+    "main.b8357f3c.js.map": "/almax/static/js/main.b8357f3c.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.f8ce0032.js"
+    "static/js/main.b8357f3c.js"
   ]
 }
