@@ -48,11 +48,13 @@ export const Socials:React.FC = () => {
   return (
     <SocialsList>
       {socials.map(({ id, link, component }) => {
-        return <li key={id}>
-          <a href={link}>
-            {component}
-          </a>
-        </li>
+        return (
+          <li key={id}>
+            <a href={link}>
+              {component}
+            </a>
+          </li>
+        )
       })}
     </SocialsList>
   );
