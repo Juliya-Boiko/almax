@@ -1,4 +1,4 @@
-import { TitleH1 } from "components/common/Headings.styled";
+import { TitleH1 } from "components/common/Typografy.styled";
 import { PrimaryBtn } from "components/buttons/PrimaryBtn";
 import styled from "styled-components";
 

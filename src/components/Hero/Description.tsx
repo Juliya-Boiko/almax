@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import bgiMobile from '../assets/hero-mobile.png';
-import bgiDesktop from '../assets/hero-desktop.png';
+import bgiMobile from '../assets/hero/hero-mobile.png';
+import bgiDesktop from '../assets/hero/hero-desktop.png';
 import { About } from "./About";
 
 const Container = styled.div`

@@ -1,14 +1,7 @@
 import { Socials } from "components/Socials";
 import styled from "styled-components";
 import { theme } from "styles/theme";
-
-type StyleTypes = {
-  mB: string,
-  fW: number,
-  fS: string,
-  lH: string,
-  color?: string
-}
+import { Text } from "components/common/Typografy.styled";
 
 const Container = styled.div`
   max-width: 370px;
@@ -17,14 +10,6 @@ const Container = styled.div`
     max-width: 300px;
     margin: 0;
   }
-`;
-
-const Text = styled.p<StyleTypes>`
-  margin: 0 0 ${p => p.mB};
-  font-weight: ${p => p.fW};
-  font-size: ${p => p.fS};
-  line-height: ${p => p.lH};
-  color: ${p => p.color};
 `;
 
 export const About:React.FC = () => {
