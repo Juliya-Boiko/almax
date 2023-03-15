@@ -1,15 +1,20 @@
 {
   "files": {
     "main.css": "/almax/static/css/main.c3d5249d.css",
-    "main.js": "/almax/static/js/main.b8357f3c.js",
+    "main.js": "/almax/static/js/main.f3b5c361.js",
     "static/media/hero-desktop.png": "/almax/static/media/hero-desktop.86ded19da7158e4243b1.png",
+    "static/media/1-dt.png": "/almax/static/media/1-dt.c182ba1a581aad81831d.png",
+    "static/media/1-mob.png": "/almax/static/media/1-mob.da71ab10e9d4b2ed86bc.png",
     "static/media/hero-mobile.png": "/almax/static/media/hero-mobile.cdd10e2a3ec2ac43f200.png",
+    "static/media/4.png": "/almax/static/media/4.ba07f0fa82abd46f3513.png",
+    "static/media/2.png": "/almax/static/media/2.c6ec95336c42721b6959.png",
+    "static/media/3.png": "/almax/static/media/3.0d2b34a183c1a2f5013b.png",
     "index.html": "/almax/index.html",
     "main.c3d5249d.css.map": "/almax/static/css/main.c3d5249d.css.map",
-    "main.b8357f3c.js.map": "/almax/static/js/main.b8357f3c.js.map"
+    "main.f3b5c361.js.map": "/almax/static/js/main.f3b5c361.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.b8357f3c.js"
+    "static/js/main.f3b5c361.js"
   ]
 }
