@@ -4,6 +4,7 @@ import { Benefits } from "./Benefits";
 // import { Services } from "./Services";
 import { Values } from "./Values";
 import { Projects } from "./Projects";
+import { Contacts } from "./Contacts";
 import { Footer } from "./Footer";
 
 export const App:React.FC = () => {
@@ -16,6 +17,7 @@ export const App:React.FC = () => {
         {/* <Services /> */}
         <Values />
         <Projects />
+        <Contacts />
       </main>
       <Footer />
     </>

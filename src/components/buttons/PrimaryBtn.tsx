@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IoMdArrowForward } from "react-icons/io";
+import { RiSendPlane2Fill } from "react-icons/ri";
 
 type ButtonTypes = {
   type: 'button' | 'submit',
@@ -41,7 +42,7 @@ export const PrimaryBtn: React.FC<ButtonTypes> = ({ type, title, width }) => {
   return (
     <Button type={type} width={width}>
       {title}
-      <IoMdArrowForward size="24" />
+      { type === 'button' ? <IoMdArrowForward size="24" /> : <RiSendPlane2Fill size="24" /> }
     </Button>
   );
 };
