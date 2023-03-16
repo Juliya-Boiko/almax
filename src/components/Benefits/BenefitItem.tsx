@@ -1,18 +1,12 @@
-import { theme } from "styles/theme";
-import { Text } from "components/common/Typografy.styled";
+import { TitleH3, TextNormal } from "components/common/Typografy.styled";
 import styled from "styled-components";
+import { BenefitType } from "../../data/benefits";
 
-type BenefitTypes = {
-  item: {
-    id: number,
-    benefit: string,
-    imgMobile: string,
-    imgDesktop: string
-    title: string
-  }
+type BenefitItemProps = {
+  item: BenefitType
 };
 
-type StyleTypes = {
+type ImageStyleProps = {
   mobile: string,
   desktop: string
 };
@@ -28,7 +22,7 @@ const Item = styled.li`
   }
 `;
 
-const Image = styled.div<StyleTypes>`
+const Image = styled.div<ImageStyleProps>`
   width: 100%;
   filter: grayscale(100%);
   flex-grow: 1;
@@ -41,12 +35,12 @@ const Image = styled.div<StyleTypes>`
   }
 `;
 
-export const BenefitItem: React.FC<BenefitTypes> = ({ item }) => {
+export const BenefitItem: React.FC<BenefitItemProps> = ({ item }) => {
   return (
     <Item>
       <Image mobile={item.imgMobile} desktop={item.imgDesktop} />
-      <Text mB="30px" fW={theme.fontWeight.extra} fS="20px" lH="1.4">{item.title}</Text>
-      <Text mB="0" fW={theme.fontWeight.normal} fS="14px" lH="1.7" color={theme.colors.gray3}>{item.benefit}</Text>
+      <TitleH3>{item.title}</TitleH3>
+      <TextNormal mB="0">{item.benefit}</TextNormal>
     </Item>
   );
 };

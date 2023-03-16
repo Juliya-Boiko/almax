@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "components/common/Typografy.styled";
+import { theme } from "styles/theme";
 
 const NavList = styled.ul`
   display: flex;
@@ -11,26 +13,15 @@ const NavList = styled.ul`
   }
 `;
 
-const NavLink = styled.a`
-  font-weight: ${p => p.theme.fontWeight.medium};
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-  color: inherit;
-  &:hover{
-    color: ${p => p.theme.colors.blue};
-  }
-`;
-
 export const Nav:React.FC = () => {
   return (
     <nav>
       <NavList>
         <li>
-          <NavLink href="/">Work</NavLink>
+          <Link fW={theme.fontWeight.medium} href="/">Work</Link>
         </li>
         <li>
-          <NavLink href="/">Contact</NavLink>
+          <Link fW={theme.fontWeight.medium} href="/">Contact</Link>
         </li>
       </NavList>
     </nav>
