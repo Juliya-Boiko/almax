@@ -1,9 +1,8 @@
-import { TitleH2, TextNormal } from "components/common/Typografy.styled";
-import { Section } from "components/common/Section.styled";
-import { Container } from "components/common/Container.styled";
+import { TextNormal } from "components/common/Typografy.styled";
 import { ValueItem } from "./ValueItem";
 import { values, ValueType } from "data/values";
 import styled from "styled-components";
+import { Section } from "components/Section";
 
 const Content = styled.div`
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
@@ -30,16 +29,13 @@ const List = styled.ul`
 
 export const Values = () => {
   return (
-    <Section>
-      <Container>
-        <TitleH2>Our values</TitleH2>
-        <Content>
-          <TextNormal mB="80px">As ALMAX we base our work on these three values / principals:</TextNormal>
-          <List>
-            { values.map((item: ValueType) => <ValueItem key={item.id} item={item} />) }
-          </List>
-        </Content>
-      </Container>
+    <Section title="Our values">
+      <Content>
+        <TextNormal mB="80px">As ALMAX we base our work on these three values / principals:</TextNormal>
+        <List>
+          { values.map((item: ValueType) => <ValueItem key={item.id} item={item} />) }
+        </List>
+      </Content>
     </Section>
   );
 };

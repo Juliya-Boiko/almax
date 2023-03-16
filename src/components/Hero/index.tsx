@@ -1,7 +1,7 @@
 import { Primary } from "./Primary";
 import { Description } from "./Description";
 import styled from "styled-components";
-import { Section } from "components/common/Section.styled";
+import { Wrapper } from "components/common/Wrapper.styled";
 import { Container } from "components/common/Container.styled";
 import { RecentWork } from "components/RecentWork";
 import { works } from "data/works";
@@ -35,7 +35,7 @@ export const Hero: React.FC = () => {
    const data = works.slice(0, 3);
 
   return (
-    <Section>
+    <Wrapper>
       <Container>
         <Content>
           <Primary />
@@ -43,6 +43,6 @@ export const Hero: React.FC = () => {
           <RecentWork data={data} />
         </Content>
       </Container>
-    </Section>
+    </Wrapper>
   );
 };

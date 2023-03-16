@@ -1,11 +1,9 @@
-import { Section } from "components/common/Section.styled";
-import { Container } from "components/common/Container.styled";
-import { TitleH2 } from "components/common/Typografy.styled";
 import { useState } from "react";
 import { projects, ArrayProjectsType, ProjectType } from "data/projects";
 import { ProjectItem } from "./ProjectItem";
 import styled from "styled-components";
 import { SecondaryBtn } from "components/buttons/SecondaryBtn";
+import { Section } from "components/Section";
 
 const List = styled.ul`
   display: grid;
@@ -24,14 +22,11 @@ export const Projects = () => {
   const data: ArrayProjectsType = fullList ? projects : croppedData;
 
   return (
-    <Section>
-      <Container>
-        <TitleH2>Our projects</TitleH2>
-        <List>
-          {data.map((item: ProjectType) => <ProjectItem key={item.id} item={item} />) }
-        </List>
-        <SecondaryBtn fullList={fullList} onClick={() => setFullList(prevState => !prevState)} />
-      </Container>
+    <Section title="Our projects">
+      <List>
+        {data.map((item: ProjectType) => <ProjectItem key={item.id} item={item} />) }
+      </List>
+      <SecondaryBtn fullList={fullList} onClick={() => setFullList(prevState => !prevState)} />
     </Section>
   );
 };
