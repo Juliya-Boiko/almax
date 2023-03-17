@@ -1,9 +1,11 @@
-import { services, ServiceType } from "../../data/services";
+import { MemberType } from "data/team";
+import { ServiceType } from "../../data/services";
 import { useState } from "react";
 import styled from "styled-components";
 import { IoIosArrowDown } from "react-icons/io";
 
 type SelectGroupProps = {
+  data: Array<ServiceType | MemberType>
   selected: number
   selectHandler: (e: number) => void
 }
@@ -43,17 +45,17 @@ const List = styled.ul`
   }
 `;
 
-export const SelectGroup: React.FC<SelectGroupProps> = ({ selected, selectHandler }) => {
+export const SelectGroup: React.FC<SelectGroupProps> = ({ data, selected, selectHandler }) => {
   const [showOpts, setShowOpts] = useState<Boolean>(false);
 
   return (
     <Content>
       <SelectedOption onClick={() => setShowOpts(prevState => !prevState)} >
-        {services[selected].option}
+        {data[selected].option}
         <IoIosArrowDown size="28" />
       </SelectedOption>
       {showOpts
-        ? <List>{services.map((item: ServiceType) => {
+        ? <List>{data.map((item) => {
           return <li
             key={item.id}
             onClick={() => {
@@ -69,3 +71,8 @@ export const SelectGroup: React.FC<SelectGroupProps> = ({ selected, selectHandle
     </Content>
   );
 };
+
+
+
+
+

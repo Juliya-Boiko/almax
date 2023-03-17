@@ -1,8 +1,11 @@
-import { services, ServiceType } from "data/services";
+
+import { MemberType } from "data/team";
+import { ServiceType } from "data/services";
 import { IoIosArrowForward } from "react-icons/io";
 import styled from "styled-components";
 
 type SelectListProps = {
+  data: Array<ServiceType | MemberType>
   selected: number,
   selectHandler: (e: number) => void
 };
@@ -10,6 +13,13 @@ type SelectListProps = {
 type ItemStyleProps = {
   bordered: boolean
 }
+
+const List = styled.ul`
+  display: none;
+  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
+    display: block;
+  }
+`;
 
 const Item = styled.li<ItemStyleProps>`
   display: flex;
@@ -25,14 +35,14 @@ const Item = styled.li<ItemStyleProps>`
   }
 `;
 
-export const SelectList: React.FC<SelectListProps> = ({ selected, selectHandler }) => {
+export const SelectList: React.FC<SelectListProps> = ({ data, selected, selectHandler }) => {
   const bordered = (id: number) => {
     return id === selected ? true : false;
   };
 
   return (
-    <ul>
-      {services.map((item: ServiceType) => {
+    <List>
+      {data.map((item) => {
         return <Item
           key={item.id}
           bordered={bordered(item.id)}
@@ -41,6 +51,6 @@ export const SelectList: React.FC<SelectListProps> = ({ selected, selectHandler 
           {item.option}
            <IoIosArrowForward size="20" />
       </Item> }) }
-    </ul>
+    </List>
   );
 };

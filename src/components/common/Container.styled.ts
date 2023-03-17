@@ -21,5 +21,4 @@ export const Container = styled.div<StyleTypes>`
     padding: 0 100px;
     margin: 0 auto;
   }
-  //background-color: orangered;
 `;

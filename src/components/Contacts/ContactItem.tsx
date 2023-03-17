@@ -36,7 +36,7 @@ export const ContactItem: React.FC<ContactItemProps> = ({ item }) => {
       <Image src={item.avatar} alt={item.name} />
       <TitleH3>{item.name}</TitleH3>
       <Email>{item.email}</Email>
-      <TextMedium mB="0">{item.position}</TextMedium>
+      <TextMedium mB="0">{item.option}</TextMedium>
     </Item>
   );
 };

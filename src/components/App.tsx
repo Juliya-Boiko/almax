@@ -3,6 +3,7 @@ import { Hero } from "./Hero";
 import { Benefits } from "./Benefits";
 import { Services } from "./Services";
 import { Values } from "./Values";
+import { Team } from "./Team";
 import { Projects } from "./Projects";
 import { Contacts } from "./Contacts";
 import { Footer } from "./Footer";
@@ -16,6 +17,7 @@ export const App:React.FC = () => {
         <Benefits />
         <Services />
         <Values />
+        <Team />
         <Projects />
         <Contacts />
       </main>

@@ -2,12 +2,12 @@ import { Section } from "components/Section";
 import { useState } from "react";
 import styled from "styled-components";
 import { services } from "../../data/services";
-import { SelectGroup } from "./SelectGroup";
-import { SelectList } from "./SelectList";
+import { SelectList } from "components/Select/SelectList";
 import { ServiceInfo } from "./ServiceInfo";
 import { PrimaryBtn } from "components/buttons/PrimaryBtn";
 import { works } from "../../data/works";
 import { RecentWork } from "components/RecentWork";
+import { SelectGroup } from "components/Select/SelectGroup";
 
 const Content = styled.div`
   display: grid;
@@ -56,8 +56,8 @@ export const Services:React.FC  = () => {
   return (
     <Section title="Our services">
       <Content>
-        <SelectGroup selected={selected} selectHandler={selectHandler} />
-        <SelectList selected={selected} selectHandler={selectHandler} />
+        <SelectGroup data={services} selected={selected} selectHandler={selectHandler} />
+        <SelectList data={services} selected={selected} selectHandler={selectHandler} />
         <ServiceInfo selected={selected} />
         <Image src={item.img} alt={item.option} />
         <RecentServices>

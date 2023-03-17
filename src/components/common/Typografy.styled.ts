@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-type ParagraphTypes = {
-  mB: string,
-  fW: number,
-  fS: string,
-  lH: string,
-  color?: string
-};
-
 type TextType = {
   mB: string,
 }
@@ -63,14 +55,6 @@ export const TextNormal = styled.p<TextType>`
   font-size: 14px;
   line-height: 1.7;
   color: ${p => p.theme.colors.gray2};
-`;
-
-export const Text = styled.p<ParagraphTypes>`
-  margin: 0 0 ${p => p.mB};
-  font-weight: ${p => p.fW};
-  font-size: ${p => p.fS};
-  line-height: ${p => p.lH};
-  color: ${p => p.color};
 `;
 
 export const Link = styled.a<LinkTypes>`
