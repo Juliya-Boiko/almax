@@ -1,8 +1,8 @@
+import styled from "styled-components";
+import { team, MemberType } from "data/team";
 import { Section } from "components/Section";
 import { Form } from "./Form";
-import { team, MemberType } from "data/team";
 import { ContactItem } from "./ContactItem";
-import styled from "styled-components";
 import { Offer } from "./Offer";
 
 const Content = styled.div`

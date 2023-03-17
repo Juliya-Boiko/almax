@@ -1,6 +1,6 @@
-import { TitleH4, TextNormal } from "components/common/Typografy.styled";
-import { ProjectType } from "data/projects";
 import styled from "styled-components";
+import { ProjectType } from "data/projects";
+import { TitleH4, TextNormal } from "components/common/Typografy.styled";
 
 type Props = {
   item: ProjectType

@@ -1,3 +1,4 @@
+import 'modern-normalize';
 import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { Benefits } from "./Benefits";

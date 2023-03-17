@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { WorkType } from "data/works";
 import defaultBgi from '../../assets/works/default-bgi.png';
+import { WorkType } from "data/works";
 import { TitleH4, TextMedium } from "components/common/Typografy.styled";
 
 type Props = {

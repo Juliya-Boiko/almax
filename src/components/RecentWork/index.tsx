@@ -1,5 +1,5 @@
-import { TitleH4 } from "components/common/Typografy.styled";
 import styled from "styled-components";
+import { TitleH4 } from "components/common/Typografy.styled";
 import { ArrayWorksType, WorkType } from "data/works";
 import { RecentWorkItem } from "./RecentWorkItem";
 

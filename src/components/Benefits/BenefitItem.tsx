@@ -1,6 +1,6 @@
-import { TitleH3, TextNormal } from "components/common/Typografy.styled";
 import styled from "styled-components";
 import { BenefitType } from "../../data/benefits";
+import { TitleH3, TextNormal } from "components/common/Typografy.styled";
 
 type Props = {
   item: BenefitType

@@ -1,10 +1,10 @@
-import { Section } from "components/Section";
+import styled from "styled-components";
 import { useState } from "react";
+import { team } from "data/team";
+import { Section } from "components/Section";
 import { SelectGroup } from "components/Select/SelectGroup";
 import { SelectList } from "components/Select/SelectList";
-import { team } from "data/team";
 import { TeamInfo } from "./TeamInfo";
-import styled from "styled-components";
 
 const Content = styled.div`
   display: grid;
@@ -20,11 +20,11 @@ const Content = styled.div`
 export const Team = () => {
   const [selected, setSelected] = useState<number>(0);
 
-  const selectHandler = (id: number) => {
+  const selectHandler = (id: number): void => {
     setSelected(id);
   }
 
-  const nextHandler = () => {
+  const nextHandler = (): void => {
     setSelected(prevState => {
       return prevState === 3 ? 0 : prevState + 1;
     });

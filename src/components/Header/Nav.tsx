@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Link } from "components/common/Typografy.styled";
 import { theme } from "styles/theme";
+import { Link } from "components/common/Typografy.styled";
 
 const NavList = styled.ul`
   display: flex;

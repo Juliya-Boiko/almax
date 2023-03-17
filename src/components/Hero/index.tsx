@@ -1,10 +1,10 @@
-import { Primary } from "./Primary";
-import { Description } from "./Description";
 import styled from "styled-components";
+import { works, ArrayWorksType } from "data/works";
 import { Wrapper } from "components/common/Wrapper.styled";
 import { Container } from "components/common/Container.styled";
+import { Primary } from "./Primary";
+import { Description } from "./Description";
 import { RecentWork } from "components/RecentWork";
-import { works } from "data/works";
 
 const Content = styled.div`
   display: grid;
@@ -13,7 +13,6 @@ const Content = styled.div`
   font-size: 14px;
   line-height: 1.7;
   color: ${p => p.theme.colors.gray2};
-
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     display: grid;
     grid-template-columns: 520px 1fr;
@@ -32,7 +31,7 @@ const Content = styled.div`
 `;
 
 export const Hero = () => {
-   const data = works.slice(0, 3);
+   const data: ArrayWorksType = works.slice(0, 3);
 
   return (
     <Wrapper>

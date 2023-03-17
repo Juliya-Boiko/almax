@@ -1,8 +1,8 @@
+import styled from "styled-components";
+import { values, ValueType } from "data/values";
+import { Section } from "components/Section";
 import { TextNormal } from "components/common/Typografy.styled";
 import { ValueItem } from "./ValueItem";
-import { values, ValueType } from "data/values";
-import styled from "styled-components";
-import { Section } from "components/Section";
 
 const Content = styled.div`
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
@@ -12,7 +12,6 @@ const Content = styled.div`
     grid-column-gap: 100px;
     grid-row-gap: 0px;
     align-items: end;
-
   }
 `;
 

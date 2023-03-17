@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import { team, MemberType } from "data/team";
 import { RiInstagramFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
-import styled from "styled-components";
 import { TitleH4, TextMedium } from "components/common/Typografy.styled";
 import { IoMdArrowForward } from "react-icons/io";
 import { IconBtn } from "components/buttons/IconBtn";
@@ -50,7 +50,7 @@ const NextImage = styled.img`
 
 export const TeamInfo = ({ selected, nextHandler }: Props) => {
   const item: MemberType = team[selected];
-  const next = () => { return selected === 3 ? 0 : selected + 1 };
+  const next = (): number => { return selected === 3 ? 0 : selected + 1 };
   const nextItem: MemberType = team[next()];
 
   return (

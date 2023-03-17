@@ -1,6 +1,6 @@
-import { BenefitItem } from "./BenefitItem";
 import styled from "styled-components";
 import { benefits, BenefitType } from "../../data/benefits";
+import { BenefitItem } from "./BenefitItem";
 
 const List = styled.ul`
   display: grid;

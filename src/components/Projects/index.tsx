@@ -1,7 +1,7 @@
+import styled from "styled-components";
 import { useState } from "react";
 import { projects, ArrayProjectsType, ProjectType } from "data/projects";
 import { ProjectItem } from "./ProjectItem";
-import styled from "styled-components";
 import { SecondaryBtn } from "components/buttons/SecondaryBtn";
 import { Section } from "components/Section";
 

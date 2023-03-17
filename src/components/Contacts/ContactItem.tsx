@@ -1,5 +1,5 @@
-import { MemberType } from "data/team";
 import styled from "styled-components";
+import { MemberType } from "data/team";
 import { TitleH3, TextMedium } from "components/common/Typografy.styled";
 
 type Props = {

@@ -1,5 +1,5 @@
-import { ValueType } from "data/values";
 import styled from "styled-components";
+import { ValueType } from "data/values";
 import { TitleH3, TextNormal } from "components/common/Typografy.styled";
 
 type Props = {

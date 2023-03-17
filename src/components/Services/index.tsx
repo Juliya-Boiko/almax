@@ -1,13 +1,13 @@
-import { Section } from "components/Section";
-import { useState } from "react";
 import styled from "styled-components";
-import { services } from "../../data/services";
+import { useState } from "react";
+import { services, ServiceType } from "../../data/services";
+import { works, ArrayWorksType, WorkType } from "../../data/works";
+import { Section } from "components/Section";
+import { SelectGroup } from "components/Select/SelectGroup";
 import { SelectList } from "components/Select/SelectList";
 import { ServiceInfo } from "./ServiceInfo";
 import { PrimaryBtn } from "components/buttons/PrimaryBtn";
-import { works } from "../../data/works";
 import { RecentWork } from "components/RecentWork";
-import { SelectGroup } from "components/Select/SelectGroup";
 
 const Content = styled.div`
   display: grid;
@@ -36,6 +36,7 @@ const RecentServices = styled.div`
     flex-direction: column-reverse;
     justify-content: space-between;
   }
+  
   button {
     margin: 0 0 80px 0;
     @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
@@ -46,10 +47,10 @@ const RecentServices = styled.div`
 
 export const Services = () => {
   const [selected, setSelected] = useState<number>(0);
-  const item = services[selected];
-  const filtered = works.filter(work => work.type.includes(item.option))
+  const item: ServiceType = services[selected];
+  const filtered: ArrayWorksType = works.filter((work: WorkType) => work.type.includes(item.option));
 
-  const selectHandler = (id: number) => {
+  const selectHandler = (id: number): void => {
     setSelected(id);
   }
 
