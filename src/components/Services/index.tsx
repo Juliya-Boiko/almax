@@ -62,7 +62,7 @@ export const Services = () => {
         <ServiceInfo selected={selected} />
         <Image src={item.img} alt={item.option} />
         <RecentServices>
-          <PrimaryBtn type="button" title="Order service now" />
+          <PrimaryBtn type="button" title="Order service now" onClick={() => { window.location.href = "#contact" }} />
           <RecentWork data={filtered} />
         </RecentServices>
       </Content>

@@ -5,7 +5,8 @@ import { RiSendPlane2Fill } from "react-icons/ri";
 type Props = {
   type: 'button' | 'submit',
   title: string,
-  width?: string
+  width?: string,
+  onClick: () => void
 };
 
 type StyleTypes = {
@@ -37,9 +38,9 @@ const Button = styled.button<StyleTypes>`
   }
 `;
 
-export const PrimaryBtn = ({ type, title, width }: Props) => {
+export const PrimaryBtn = ({ type, title, width, onClick }: Props) => {
   return (
-    <Button type={type} width={width}>
+    <Button type={type} width={width} onClick={onClick}>
       {title}
       { type === 'button' ? <IoMdArrowForward size="24" /> : <RiSendPlane2Fill size="24" /> }
     </Button>

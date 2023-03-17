@@ -42,7 +42,7 @@ const InfoBlock = styled.div`
 
 export const Contacts = () => {
   return (
-    <Section title="Get in touch">
+    <Section title="Get in touch" id="contact">
       <Content>
         <Form />
         <InfoBlock>

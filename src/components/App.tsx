@@ -7,6 +7,7 @@ import { Values } from "./Values";
 import { Team } from "./Team";
 import { Projects } from "./Projects";
 import { Contacts } from "./Contacts";
+import { Scroll } from './Scroll';
 import { Footer } from "./Footer";
 
 export const App:React.FC = () => {
@@ -21,6 +22,7 @@ export const App:React.FC = () => {
         <Team />
         <Projects />
         <Contacts />
+        <Scroll />
       </main>
       <Footer />
     </>

@@ -22,7 +22,7 @@ export const Projects = () => {
   const data: ArrayProjectsType = fullList ? projects : croppedData;
 
   return (
-    <Section title="Our projects">
+    <Section title="Our projects" id="work">
       <List>
         {data.map((item: ProjectType) => <ProjectItem key={item.id} item={item} />) }
       </List>

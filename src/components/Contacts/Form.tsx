@@ -10,7 +10,7 @@ export const Form = () => {
       <Input type="text" name="name" placeholder="your name" />
       <Input type="text" name="contact" placeholder="phone number or email" />
       <Textarea name="comment" placeholder="leave comment..." rows={5} />
-      <PrimaryBtn type="submit" title="Send a message" />
+      <PrimaryBtn type="submit" title="Send a message" onClick={() => console.log('submit')} />
     </form>
   );
 };

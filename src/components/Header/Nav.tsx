@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import { theme } from "styles/theme";
-import { Link } from "components/common/Typografy.styled";
 
 const NavList = styled.ul`
   display: flex;
   align-items: center;
 
   li {
+    font-weight: ${p => p.theme.fontWeight.medium};
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    &:hover{
+      color: ${p => p.theme.colors.blue};
+    }
     &:not(:last-child) {
       margin: 0 24px 0 0;
     }
@@ -17,11 +22,11 @@ export const Nav = () => {
   return (
     <nav>
       <NavList>
-        <li>
-          <Link fW={theme.fontWeight.medium} href="/">Work</Link>
+        <li onClick={() => window.location.href = "#work"}>
+          Work
         </li>
-        <li>
-          <Link fW={theme.fontWeight.medium} href="/">Contact</Link>
+        <li onClick={() => window.location.href = "#contact"}>
+          Contact
         </li>
       </NavList>
     </nav>
