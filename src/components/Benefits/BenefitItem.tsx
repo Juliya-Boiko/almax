@@ -2,7 +2,7 @@ import { TitleH3, TextNormal } from "components/common/Typografy.styled";
 import styled from "styled-components";
 import { BenefitType } from "../../data/benefits";
 
-type BenefitItemProps = {
+type Props = {
   item: BenefitType
 };
 
@@ -35,7 +35,7 @@ const Image = styled.div<ImageStyleProps>`
   }
 `;
 
-export const BenefitItem: React.FC<BenefitItemProps> = ({ item }) => {
+export const BenefitItem = ({ item }: Props) => {
   return (
     <Item>
       <Image mobile={item.imgMobile} desktop={item.imgDesktop} />

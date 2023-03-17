@@ -33,7 +33,7 @@ const Text = styled.p`
   }
 `;
 
-export const Footer:React.FC = () => {
+export const Footer = () => {
   return (
     <Content>
       <Container>

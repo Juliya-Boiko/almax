@@ -56,4 +56,4 @@ export const works: ArrayWorksType = [
     logo: arrivalsLogo,
     date: '03-03-2023'
   },
-]
+];

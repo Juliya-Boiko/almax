@@ -1,7 +1,7 @@
 import { BenefitsList } from "./BenefitsList";
 import { Section } from "components/Section";
 
-export const Benefits:React.FC = () => {
+export const Benefits = () => {
   return (
     <Section title="How we add value to your business">
       <BenefitsList />

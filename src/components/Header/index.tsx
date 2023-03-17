@@ -8,7 +8,7 @@ const Content = styled.header`
   padding: 40px 0 0 0;
 `; 
 
-export const Header:React.FC = () => {
+export const Header = () => {
   return (
     <Content>
       <Container display='flex' justify="space-between">

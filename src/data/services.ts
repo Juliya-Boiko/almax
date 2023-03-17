@@ -1,7 +1,6 @@
 import imgDefault1 from '../assets/services/services-default.png';
 import imgDefault2 from '../assets/services/services-default-2.png';
 
-
 export type ServiceType = {
   id: number,
   option: string,

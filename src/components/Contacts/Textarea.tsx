@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-type TextareaProps = {
+type Props = {
   name: string,
   placeholder: string,
   rows: number
@@ -22,7 +22,7 @@ const CustomTextarea = styled.textarea`
   }
 `;
 
-export const Textarea: React.FC<TextareaProps> = ({ placeholder, name, rows }) => {
+export const Textarea = ({ placeholder, name, rows }: Props) => {
   return (
     <CustomTextarea style={{ resize: 'none' }} name={name} id={name} placeholder={placeholder} rows={rows} />
   );

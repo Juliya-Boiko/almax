@@ -28,7 +28,7 @@ const List = styled.ul`
   }
 `;
 
-export const BenefitsList: React.FC = () => {
+export const BenefitsList = () => {
   return (
     <List>
       {benefits.map((benefit: BenefitType) => <BenefitItem key={benefit.id} item={benefit} />)}

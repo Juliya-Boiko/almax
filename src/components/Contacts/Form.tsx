@@ -14,5 +14,3 @@ export const Form = () => {
     </form>
   );
 };
-
-// type, title, width 

@@ -44,7 +44,7 @@ const RecentServices = styled.div`
   }
 `;
 
-export const Services:React.FC  = () => {
+export const Services = () => {
   const [selected, setSelected] = useState<number>(0);
   const item = services[selected];
   const filtered = works.filter(work => work.type.includes(item.option))

@@ -1,7 +1,7 @@
 import { TitleH1, TextNormal } from "components/common/Typografy.styled";
 import { PrimaryBtn } from "components/buttons/PrimaryBtn";
 
-export const Primary:React.FC = () => {
+export const Primary = () => {
   return (
     <div>
       <TitleH1>Adding Creativity to Your Triumph</TitleH1>

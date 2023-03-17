@@ -30,4 +30,4 @@ export const values: ArrayValuesType = [
     descr: 'A traditional Japanese exclamation meaning “ten thousand years” of long life. To be short and sweet — we make your results last.',
     logo: valueImg3,
   },
-]
+];

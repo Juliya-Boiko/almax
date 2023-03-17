@@ -31,7 +31,7 @@ const Content = styled.div`
   }
 `;
 
-export const Hero: React.FC = () => {
+export const Hero = () => {
    const data = works.slice(0, 3);
 
   return (

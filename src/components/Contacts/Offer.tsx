@@ -25,9 +25,7 @@ export const Offer = () => {
         <p>— image</p>
         <p>— user experience</p>
       </div>
-
       <TextNormal mB="0" >ALMAX is a strategically driven, digital-first agency that lives at the intersection of creativity and technology. We solve consumer and business problems with end-to-end solutions that flex to meet the needs of today’s ever-changing digital landscape.</TextNormal>
-      
     </OfferBlock>
   );
 };

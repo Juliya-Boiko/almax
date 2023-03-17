@@ -26,12 +26,7 @@ export const Team = () => {
 
   const nextHandler = () => {
     setSelected(prevState => {
-    //   return prevState === 3 ? 0 : prevState + 1;
-    // });
-      if (prevState === 3) {
-        return 0;
-      }
-      return prevState + 1;
+      return prevState === 3 ? 0 : prevState + 1;
     });
   };
 

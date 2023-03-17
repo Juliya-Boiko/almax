@@ -4,7 +4,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { IoIosArrowDown } from "react-icons/io";
 
-type SelectGroupProps = {
+type Props = {
   data: Array<ServiceType | MemberType>
   selected: number
   selectHandler: (e: number) => void
@@ -45,7 +45,7 @@ const List = styled.ul`
   }
 `;
 
-export const SelectGroup: React.FC<SelectGroupProps> = ({ data, selected, selectHandler }) => {
+export const SelectGroup = ({ data, selected, selectHandler }: Props) => {
   const [showOpts, setShowOpts] = useState<Boolean>(false);
 
   return (

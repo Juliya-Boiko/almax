@@ -44,7 +44,7 @@ const SocialsList = styled.ul`
   }
 `;
 
-export const Socials:React.FC = () => {
+export const Socials = () => {
   return (
     <SocialsList>
       {socials.map(({ id, link, component }) => {
@@ -58,4 +58,4 @@ export const Socials:React.FC = () => {
       })}
     </SocialsList>
   );
-}
+};

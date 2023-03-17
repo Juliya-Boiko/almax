@@ -5,7 +5,7 @@ import { TitleH4, TextMedium } from "components/common/Typografy.styled";
 import { IoMdArrowForward } from "react-icons/io";
 import { IconBtn } from "components/buttons/IconBtn";
 
-type TeamInfoProps = {
+type Props = {
   selected: number,
   nextHandler: () => void
 };
@@ -29,10 +29,6 @@ const MainInfo = styled.div`
 const Image = styled.img`
   width: 100%;
   margin: 0 0 40px 0;
-  @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
-   // width: 632px;
-    margin: 0 ;
-  }
 `;
 
 const NameBlock = styled.div`
@@ -52,7 +48,7 @@ const NextImage = styled.img`
   filter: grayscale(100%);
 `;
 
-export const TeamInfo: React.FC<TeamInfoProps> = ({ selected, nextHandler }) => {
+export const TeamInfo = ({ selected, nextHandler }: Props) => {
   const item: MemberType = team[selected];
   const next = () => { return selected === 3 ? 0 : selected + 1 };
   const nextItem: MemberType = team[next()];
@@ -75,7 +71,6 @@ export const TeamInfo: React.FC<TeamInfoProps> = ({ selected, nextHandler }) => 
           <a href="/"><RiLinkedinFill size="16" /></a>
         </Socials>
       </MainInfo>
-
       <div>
         <TitleH4>{nextItem.name}</TitleH4>
         <NextImage src={nextItem.avatar} alt={nextItem.name}  />

@@ -2,7 +2,7 @@ import { TitleH4, TextNormal } from "components/common/Typografy.styled";
 import { ProjectType } from "data/projects";
 import styled from "styled-components";
 
-type ProjectItemProps = {
+type Props = {
   item: ProjectType
 };
 
@@ -24,7 +24,7 @@ const Image = styled.img`
     }
 `;
 
-export const ProjectItem: React.FC<ProjectItemProps> = ({ item }) => {
+export const ProjectItem = ({ item }: Props) => {
   return (
     <Item>
       <Image src={item.img} alt={item.title} />

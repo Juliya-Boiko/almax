@@ -13,7 +13,7 @@ const NavList = styled.ul`
   }
 `;
 
-export const Nav:React.FC = () => {
+export const Nav = () => {
   return (
     <nav>
       <NavList>

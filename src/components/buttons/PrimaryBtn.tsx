@@ -2,11 +2,10 @@ import styled from "styled-components";
 import { IoMdArrowForward } from "react-icons/io";
 import { RiSendPlane2Fill } from "react-icons/ri";
 
-type ButtonTypes = {
+type Props = {
   type: 'button' | 'submit',
   title: string,
   width?: string
-  // onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
 type StyleTypes = {
@@ -38,7 +37,7 @@ const Button = styled.button<StyleTypes>`
   }
 `;
 
-export const PrimaryBtn: React.FC<ButtonTypes> = ({ type, title, width }) => {
+export const PrimaryBtn = ({ type, title, width }: Props) => {
   return (
     <Button type={type} width={width}>
       {title}

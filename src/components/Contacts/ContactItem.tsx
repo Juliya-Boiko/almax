@@ -2,7 +2,7 @@ import { MemberType } from "data/team";
 import styled from "styled-components";
 import { TitleH3, TextMedium } from "components/common/Typografy.styled";
 
-type ContactItemProps = {
+type Props = {
   item: MemberType
 };
 
@@ -30,7 +30,7 @@ const Email = styled.a`
   color: ${p => p.theme.colors.blue};
 `;
 
-export const ContactItem: React.FC<ContactItemProps> = ({ item }) => {
+export const ContactItem = ({ item }: Props) => {
   return (
     <Item>
       <Image src={item.avatar} alt={item.name} />

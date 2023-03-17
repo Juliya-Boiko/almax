@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-type IconBtnProps = {
+type Props = {
   children: JSX.Element,
   onClick: () => void
 };
@@ -13,7 +13,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export const IconBtn: React.FC<IconBtnProps> = ({ children, onClick }) => {
+export const IconBtn = ({ children, onClick }: Props) => {
   return (
     <Button type="button" onClick={onClick}>
       {children}

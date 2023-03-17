@@ -3,7 +3,7 @@ import { WorkType } from "data/works";
 import defaultBgi from '../../assets/works/default-bgi.png';
 import { TitleH4, TextMedium } from "components/common/Typografy.styled";
 
-type RecentWorkItemProps = {
+type Props = {
   item: WorkType
 };
 
@@ -23,7 +23,7 @@ const Image = styled.div`
   justify-content: center;
 `;
 
-export const RecentWorkItem: React.FC<RecentWorkItemProps> = ({ item }) => {
+export const RecentWorkItem = ({ item }: Props) => {
   return (
     <Item>
       <Image>

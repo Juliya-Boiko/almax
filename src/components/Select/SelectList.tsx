@@ -4,7 +4,7 @@ import { ServiceType } from "data/services";
 import { IoIosArrowForward } from "react-icons/io";
 import styled from "styled-components";
 
-type SelectListProps = {
+type Props = {
   data: Array<ServiceType | MemberType>
   selected: number,
   selectHandler: (e: number) => void
@@ -35,7 +35,7 @@ const Item = styled.li<ItemStyleProps>`
   }
 `;
 
-export const SelectList: React.FC<SelectListProps> = ({ data, selected, selectHandler }) => {
+export const SelectList = ({ data, selected, selectHandler }: Props) => {
   const bordered = (id: number) => {
     return id === selected ? true : false;
   };

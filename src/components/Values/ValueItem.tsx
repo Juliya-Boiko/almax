@@ -2,7 +2,7 @@ import { ValueType } from "data/values";
 import styled from "styled-components";
 import { TitleH3, TextNormal } from "components/common/Typografy.styled";
 
-type ValueItemProps = {
+type Props = {
   item: ValueType
 };
 
@@ -21,7 +21,7 @@ const Item = styled.li`
   }
 `;
 
-export const ValueItem: React.FC<ValueItemProps> = ({ item }) => {
+export const ValueItem = ({ item }: Props) => {
   return (
     <Item>
       <img src={item.logo} alt={item.name} />

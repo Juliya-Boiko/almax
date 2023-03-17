@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { ArrayWorksType, WorkType } from "data/works";
 import { RecentWorkItem } from "./RecentWorkItem";
 
-type RecentWorkProps = {
+type Props = {
   data: ArrayWorksType
 };
 
@@ -12,7 +12,7 @@ const List = styled.ul`
   grid-row-gap: 20px;
 `;
 
-export const RecentWork: React.FC<RecentWorkProps> = ({ data }) => {
+export const RecentWork = ({ data }: Props) => {
  
   return (
     <div>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-type InputProps = {
+type Props = {
   type: string,
   name: string,
   placeholder: string,
@@ -21,7 +21,7 @@ export const CustomInput = styled.input`
   }
 `;
 
-export const Input: React.FC<InputProps> = ({ type, name, placeholder }) => {
+export const Input = ({ type, name, placeholder }: Props) => {
   return (
     <CustomInput type={type} name={name} id={name} placeholder={placeholder} />
   );

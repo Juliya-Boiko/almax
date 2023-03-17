@@ -28,7 +28,7 @@ const Image = styled.div`
   }
 `;
 
-export const Description:React.FC = () => {
+export const Description = () => {
   return (
     <Container>
       <Image />

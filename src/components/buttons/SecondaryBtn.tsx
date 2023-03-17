@@ -1,7 +1,7 @@
 import { IoMdArrowForward, IoMdArrowUp } from "react-icons/io";
 import styled from "styled-components";
 
-type ButtonProps = {
+type Props = {
   fullList: boolean,
   onClick: () => void
 };
@@ -20,16 +20,13 @@ const Button = styled.button`
   color: ${p => p.theme.colors.black};
   background-color: transparent;
   cursor: pointer;
-  &:hover {
-   // box-shadow: 0px 16px 64px -16px rgba(0, 0, 0, 0.6);
-  }
 
   svg {
     margin: 0 0 0 10px;
   }
 `;
 
-export const SecondaryBtn: React.FC<ButtonProps> = ({ fullList, onClick }) => {
+export const SecondaryBtn = ({ fullList, onClick }: Props) => {
   return (
     <Button type="button" onClick={onClick}>
       {fullList ? 'Hide' : 'See all projects'}
