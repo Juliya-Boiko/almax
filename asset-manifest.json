@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/almax/static/css/main.c3d5249d.css",
-    "main.js": "/almax/static/js/main.6f4cab5f.js",
+    "main.js": "/almax/static/js/main.84c95c72.js",
     "static/media/team-2.png": "/almax/static/media/team-2.dd6b4efa0ac80b250179.png",
     "static/media/team-1.png": "/almax/static/media/team-1.4408a0ca45bf56e03a50.png",
     "static/media/services-default-2.png": "/almax/static/media/services-default-2.323b269130e331059224.png",
@@ -22,10 +22,10 @@
     "static/media/arrivals.svg": "/almax/static/media/arrivals.2b1148c7c0dc330c34c9474b46c69fa9.svg",
     "index.html": "/almax/index.html",
     "main.c3d5249d.css.map": "/almax/static/css/main.c3d5249d.css.map",
-    "main.6f4cab5f.js.map": "/almax/static/js/main.6f4cab5f.js.map"
+    "main.84c95c72.js.map": "/almax/static/js/main.84c95c72.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.6f4cab5f.js"
+    "static/js/main.84c95c72.js"
   ]
 }
