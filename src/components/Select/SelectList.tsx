@@ -1,8 +1,8 @@
-
+import styled from "styled-components";
+import { motion } from "framer-motion";
 import { MemberType } from "data/team";
 import { ServiceType } from "data/services";
 import { IoIosArrowForward } from "react-icons/io";
-import styled from "styled-components";
 
 type Props = {
   data: Array<ServiceType | MemberType>
@@ -14,7 +14,7 @@ type ItemStyleProps = {
   bordered: boolean
 }
 
-const List = styled.ul`
+const List = styled(motion.ul)`
   display: none;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
     display: block;
@@ -41,7 +41,16 @@ export const SelectList = ({ data, selected, selectHandler }: Props) => {
   };
 
   return (
-    <List>
+    <List
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 1 }}
+      variants={{
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 },
+      }}
+    >
       {data.map((item) => {
         return <Item
           key={item.id}

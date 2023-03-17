@@ -1,7 +1,8 @@
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { MemberType } from "data/team";
 import { ServiceType } from "../../data/services";
-import { useState } from "react";
-import styled from "styled-components";
 import { IoIosArrowDown } from "react-icons/io";
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
   selectHandler: (e: number) => void
 }
 
-const Content = styled.div`
+const Content = styled(motion.div)`
   position: relative;
   font-weight: ${p => p.theme.fontWeight.extra};
   font-size: 12px;
@@ -49,7 +50,16 @@ export const SelectGroup = ({ data, selected, selectHandler }: Props) => {
   const [showOpts, setShowOpts] = useState<Boolean>(false);
 
   return (
-    <Content>
+    <Content
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 1 }}
+      variants={{
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 },
+      }}
+    >
       <SelectedOption onClick={() => setShowOpts(prevState => !prevState)} >
         {data[selected].option}
         <IoIosArrowDown size="28" />

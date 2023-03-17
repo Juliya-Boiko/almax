@@ -6,7 +6,7 @@ type Props = {
   type: 'button' | 'submit',
   title: string,
   width?: string,
-  onClick: () => void
+  onClick?: (e: any) => void
 };
 
 type StyleTypes = {
@@ -26,6 +26,7 @@ const Button = styled.button<StyleTypes>`
   outline: none;
   color: ${p => p.theme.colors.white};
   background-color: ${p => p.theme.colors.black};
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   &:hover {
     box-shadow: 0px 16px 64px -16px rgba(0, 0, 0, 0.6);

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { team, MemberType } from "data/team";
 import { RiInstagramFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 import { TitleH4, TextMedium } from "components/common/Typografy.styled";
@@ -26,7 +27,7 @@ const MainInfo = styled.div`
   }
 `;
 
-const Image = styled.img`
+const Image = styled(motion.img)`
   width: 100%;
   margin: 0 0 40px 0;
 `;
@@ -41,6 +42,12 @@ const Socials = styled.div`
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
+  a {
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      color: ${p => p.theme.colors.blue}
+    }
+  }
 `;
 
 const NextImage = styled.img`
@@ -56,7 +63,16 @@ export const TeamInfo = ({ selected, nextHandler }: Props) => {
   return (
     <Content>
       <MainInfo>
-        <Image src={item.avatar} alt={item.name} />
+        <Image src={item.avatar} alt={item.name}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 1 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        />
         <NameBlock>
           <TitleH4>{item.name}</TitleH4>
           <IconBtn onClick={nextHandler}>

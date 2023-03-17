@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const NavList = styled.ul`
   display: flex;
@@ -9,6 +10,7 @@ const NavList = styled.ul`
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.03em;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover{
       color: ${p => p.theme.colors.blue};
     }
@@ -22,11 +24,11 @@ export const Nav = () => {
   return (
     <nav>
       <NavList>
-        <li onClick={() => window.location.href = "#work"}>
-          Work
+        <li>
+          <AnchorLink href='#work'>Work</AnchorLink>
         </li>
-        <li onClick={() => window.location.href = "#contact"}>
-          Contact
+        <li>
+          <AnchorLink href='#contact'>Contact</AnchorLink>
         </li>
       </NavList>
     </nav>

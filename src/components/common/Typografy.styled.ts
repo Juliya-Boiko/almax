@@ -4,10 +4,6 @@ type TextType = {
   mB: string,
 }
 
-type LinkTypes = {
-  fW: number
-};
-
 export const TitleH1 = styled.h1`
   margin: 0 0 24px 0;
   font-weight: ${p => p.theme.fontWeight.extra};
@@ -55,15 +51,4 @@ export const TextNormal = styled.p<TextType>`
   font-size: 14px;
   line-height: 1.7;
   color: ${p => p.theme.colors.gray2};
-`;
-
-export const Link = styled.a<LinkTypes>`
-  font-weight: ${p => p.fW};
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-  color: inherit;
-  &:hover{
-    color: ${p => p.theme.colors.blue};
-  }
 `;

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import bgiMobile from '../../assets/hero/hero-mobile.png';
 import bgiDesktop from '../../assets/hero/hero-desktop.png';
+import { motion } from "framer-motion";
 import { TitleH4, TextMedium } from "components/common/Typografy.styled";
 import { Socials } from "components/Socials";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   display: grid;
   grid-row-gap: 40px;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
@@ -30,7 +31,16 @@ const Image = styled.div`
 
 export const Description = () => {
   return (
-    <Container>
+    <Container
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ delay: 0.2, duration: 1 }}
+      variants={{
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 },
+      }}
+    >
       <Image />
       <div>
         <TitleH4>About our work</TitleH4>

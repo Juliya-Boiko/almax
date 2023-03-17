@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { services, ServiceType } from "../../data/services";
 import { works, ArrayWorksType, WorkType } from "../../data/works";
@@ -21,7 +22,7 @@ const Content = styled.div`
   }
 `; 
 
-const Image = styled.img`
+const Image = styled(motion.img)`
   display: block;
   width: 100%;
   @media screen and (min-width: ${p => p.theme.breakpoints.desktop}) {
@@ -60,7 +61,16 @@ export const Services = () => {
         <SelectGroup data={services} selected={selected} selectHandler={selectHandler} />
         <SelectList data={services} selected={selected} selectHandler={selectHandler} />
         <ServiceInfo selected={selected} />
-        <Image src={item.img} alt={item.option} />
+        <Image src={item.img} alt={item.option}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 1 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        />
         <RecentServices>
           <PrimaryBtn type="button" title="Order service now" onClick={() => { window.location.href = "#contact" }} />
           <RecentWork data={filtered} />

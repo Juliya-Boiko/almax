@@ -15,6 +15,7 @@ const Button = styled.button`
   outline: none;
   border-radius: 50%;
   background-color: transparent;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   &:hover {
     color: ${p => p.theme.colors.white};
